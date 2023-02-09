@@ -15,7 +15,7 @@ processes = []
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
-  APP_URL = "https://projeto-vendedores-utilizando-api-IA.fly.dev"
+  APP_URL = "https://ancient-tree-9536.fly.dev"
 
 [experimental]
   auto_rollback = true
