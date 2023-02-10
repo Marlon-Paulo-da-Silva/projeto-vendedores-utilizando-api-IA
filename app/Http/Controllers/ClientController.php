@@ -53,6 +53,7 @@ class ClientController extends Controller
             $user->client()->create([
                 'address_id' => $request->get('address_id')
             ]);
+            // TODO 2:10:20 Missão 2
         });
 
         return redirect()->route('clients.index');
