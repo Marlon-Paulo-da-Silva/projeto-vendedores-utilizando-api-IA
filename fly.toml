@@ -1,6 +1,6 @@
-# fly.toml file generated for ancient-tree-9536 on 2023-02-09T16:08:40-03:00
+# fly.toml file generated for wandering-silence-3823 on 2023-02-09T18:10:07-03:00
 
-app = "ancient-tree-9536"
+app = "wandering-silence-3823"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -12,10 +12,10 @@ processes = []
 
 [env]
   APP_ENV = "production"
+  APP_URL = "https://ancient-tree-9536.fly.dev"
   LOG_CHANNEL = "stderr"
   LOG_LEVEL = "info"
   LOG_STDERR_FORMATTER = "Monolog\\Formatter\\JsonFormatter"
-  APP_URL = "https://ancient-tree-9536.fly.dev"
 
 [experimental]
   auto_rollback = true
