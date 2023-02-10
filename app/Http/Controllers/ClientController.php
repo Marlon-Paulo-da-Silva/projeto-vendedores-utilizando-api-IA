@@ -53,7 +53,7 @@ class ClientController extends Controller
             $user->client()->create([
                 'address_id' => $request->get('address_id')
             ]);
-            // TODO 2:10:20 Missão 2
+            // TODO 2:16:20 Missão 2
         });
 
         return redirect()->route('clients.index');
@@ -69,7 +69,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        return view('clients.edit', $client);
+        return view('clients.edit', compact('client'));
     }
 
     /**
@@ -81,7 +81,20 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, Client $client)
     {
-        //
+        // dd($request->all());
+
+        DB::transaction(function() use($request, $client){
+            $client->user->update([
+                'email' => $request->get('email'),
+                'name' => $request->get('name')
+            ]);
+
+            $client->update([
+                'address_id' => $request->get('address_id')
+            ]);
+        });
+
+        return redirect()->route('clients.index');
     }
 
     /**
