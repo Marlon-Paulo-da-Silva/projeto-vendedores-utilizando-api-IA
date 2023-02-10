@@ -59,16 +59,7 @@ class ClientController extends Controller
         return redirect()->route('clients.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Client $client)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -78,7 +69,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('clients.edit', $client);
     }
 
     /**
