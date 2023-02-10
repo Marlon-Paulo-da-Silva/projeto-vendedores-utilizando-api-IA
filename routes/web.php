@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/clientes', [ClientController::class, 'index']);
+// Laravel pega o index por padrão
+Route::resource('/clientes', ClientController::class);
