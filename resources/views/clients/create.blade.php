@@ -23,7 +23,7 @@
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
-                <!-- Password -->
+                <!-- address -->
                 <div class="mt-4">
                     <x-input-label for="address_id" :value="__('Address')" />
 
